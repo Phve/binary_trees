@@ -11,10 +11,9 @@
 
 void binary_tree_inorder(const binary_tree_t *tree, void (*action)(int))
 {
-	if (tree == NULL || action == NULL)
-	return;
-
-	binary_tree_inorder(tree->left, action);
+if (tree == NULL || action == NULL)
+return;
+binary_tree_inorder(tree->left, action);
 	action(tree->n);
 	binary_tree_inorder(tree->right, action);
 }
